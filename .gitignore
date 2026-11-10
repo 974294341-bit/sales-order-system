@@ -1,0 +1,22 @@
+# 编译产物
+build/
+out/
+*.class
+
+# 运行时数据（由程序自动 seed，不入库）
+data/store.json
+data/*.json
+
+# 日志
+*.log
+server.log
+
+# 系统/编辑器
+.workbuddy/
+.idea/
+*.iml
+.DS_Store
+
+# 临时
+.tmp/
+*.tmp

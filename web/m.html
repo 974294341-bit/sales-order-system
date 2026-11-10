@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>销售订货 · 手机端审批</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>window.APP_CLIENT = 'mobile';</script>
+</head>
+<body class="mobile">
+  <div id="loginMask" class="login-mask">
+    <div class="login-card">
+      <h1>销售订货 · 手机端</h1>
+      <p>全部审批流程的移动工作台，统一密码 123456</p>
+      <div class="form-row"><label>账号</label><input id="loginUser" value="engineer"></div>
+      <div class="form-row"><label>密码</label><input id="loginPass" type="password" value="123456"></div>
+      <button class="btn primary" id="loginBtn">登 录</button>
+      <div class="quick-users"><div class="label">演示岗位快捷切换</div><div class="chips" id="quickUsers"></div></div>
+    </div>
+  </div>
+
+  <div id="app" style="display:none">
+    <header class="m-header">
+      <span class="title" id="mTitle">我的待办</span>
+      <select id="roleSwitch"></select>
+      <a class="m-link" href="/index.html">PC</a>
+    </header>
+    <div class="offline-bar" id="offlineBar">网络不可用，恢复后会自动刷新待办</div>
+    <div class="m-body" id="mBody"></div>
+    <div class="m-bottom">
+      <button data-mtab="todo" class="active"><span class="ico">▤</span>待办</button>
+      <button data-mtab="orders"><span class="ico">▦</span>单据</button>
+      <button data-mtab="me"><span class="ico">◉</span>我的</button>
+    </div>
+  </div>
+
+  <div class="m-sheet" id="mSheet"><div class="m-sheet-inner" id="mSheetInner"></div></div>
+  <div id="toastBox"></div>
+  <div id="loading"><div class="spinner"></div></div>
+
+  <script>window.APP_API_BASE = '';</script>
+  <script src="/api.js"></script>
+  <script src="/charts.js"></script>
+  <script src="/m.js"></script>
+</body>
+</html>

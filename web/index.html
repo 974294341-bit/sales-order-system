@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>销售订货管理系统 · 工作台</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- 登录 -->
+  <div id="loginMask" class="login-mask">
+    <div class="login-card">
+      <h1>销售订货管理系统</h1>
+      <p>销售订货全流程数字化协同平台　|　按岗位分工的协作工作台</p>
+      <div class="form-row">
+        <label>账号</label>
+        <input id="loginUser" value="business" autocomplete="username">
+      </div>
+      <div class="form-row">
+        <label>密码</label>
+        <input id="loginPass" type="password" value="123456" autocomplete="current-password">
+      </div>
+      <button class="btn primary" id="loginBtn">登 录</button>
+      <div class="quick-users">
+        <div class="label">演示账号快捷切换（统一密码 123456）</div>
+        <div class="chips" id="quickUsers"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主界面 -->
+  <div id="appShell" style="display:none">
+    <header class="topbar">
+      <div class="logo">
+        <span class="logo-mark">销</span>
+        <span>销售订货系统<small id="logoSub">SALES ORDER SYSTEM</small></span>
+      </div>
+      <nav class="topnav" id="topnav"></nav>
+      <div class="top-right">
+        <span class="top-user">当前岗位：<b id="topRole"></b></span>
+        <select id="roleSwitch" title="切换演示账号"></select>
+        <a class="top-link" href="/m.html" target="_blank">手机端</a>
+        <button class="btn sm" id="logoutBtn">退出</button>
+      </div>
+    </header>
+    <div class="offline-bar" id="offlineBar">网络不可用，正在等待恢复；恢复后会自动刷新数据。</div>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <div class="crumb" id="crumb"></div>
+        <div class="page-head" id="pageHead"></div>
+        <div id="view"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal">
+    <div class="modal-head"><span id="modalTitle">详情</span><button class="close-x" data-act="close-modal">&times;</button></div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-foot" id="modalFoot"></div>
+  </div>
+  <div id="toastBox"></div>
+  <div id="loading"><div class="spinner"></div></div>
+
+  <script>window.APP_API_BASE = '';</script>
+  <script src="/api.js"></script>
+  <script src="/charts.js"></script>
+  <script src="/app.js"></script>
+  <script src="/views.js"></script>
+</body>
+</html>
