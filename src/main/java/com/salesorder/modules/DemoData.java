@@ -1,7 +1,7 @@
 package com.salesorder.modules;
 
+import com.salesorder.modules.FlowEngine;
 import com.salesorder.platform.Config;
-import com.salesorder.platform.FlowEngine;
 import com.salesorder.platform.Json;
 import com.salesorder.platform.Log;
 import com.salesorder.platform.Security;
